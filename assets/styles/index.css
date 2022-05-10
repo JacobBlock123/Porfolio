@@ -1,0 +1,340 @@
+/*********************/
+/* Base              */
+/*********************/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*********************/
+/* Landing Page      */
+/*********************/
+
+.menu {
+    display: none;
+    font-size: 25px;
+    color: #efefef;
+}
+
+.menu:hover {
+    color: gray;
+}
+
+body {
+    overflow: hidden;
+}
+
+.landing {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-image: url(image.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header {
+    color: #efefef;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    height: 40%;
+    animation-name: fadein2;
+    animation-duration: 1.5s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    position: relative;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.header h3 {
+    font-size: 25px;
+}
+
+nav {
+    color: #efefef;
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    animation-name: fadein;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    z-index: 1111;
+}
+
+nav h2 {
+    font-size: 25px;
+}
+
+.links {
+    display: flex;
+    width: 60%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.links p {
+    font-size: 20px;
+}
+
+.links p:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border-top: solid 5px #efefef;
+    width: 75%;
+    opacity: 0.5;
+    margin: 20px;
+}
+
+.more {
+    position: absolute;
+    bottom: 75px;
+    height: 60px;
+    width: 125px;
+    background-color: #4b6cb7;
+    color: #efefef;
+    margin: 0 auto;
+    border-radius: 35px;
+    font-size: 15px;
+    padding: 5px;
+    animation-name: fadein3;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.arrow {
+    border: solid #efefef;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 4px;
+}
+
+.down {
+    transform: rotate(45deg);
+}
+
+.point {
+    position: absolute;
+    bottom: 50px;
+    animation-name: point;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-delay: 3.6s;
+}
+
+.icons {
+    font-size: 25px;
+    color: #efefef;
+}
+
+.icons:hover {
+    color: gray;
+}
+
+a {
+    color: #efefef;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #efefef;
+}
+
+/*********************/
+/* About Me          */
+/*********************/
+
+.about {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(about.jpg);
+    background-size: cover;
+    background-position: center;
+    top: 100vh;
+}
+
+.shaded {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text {
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    color: #efefef;
+}
+
+.text h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.text p {
+    margin-top: 30px;
+    width: 75%;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.top {
+    position: absolute;
+    bottom: 75px;
+    height: 60px;
+    width: 125px;
+    background-color: #4b6cb7;
+    color: #efefef;
+    border-radius: 35px;
+    font-size: 15px;
+    padding: 5px;
+    margin-top: 20px;
+}
+
+/*********************/
+/* Media Queries     */
+/*********************/
+
+@media only screen and (max-width: 800px) {
+    .header h1 {
+        font-size: 35px;
+    }
+
+    .header h3 {
+        font-size: 20px;
+    }
+
+    nav h2 {
+        font-size: 18px;
+    }
+
+    .links p {
+        font-size: 15px;
+    }
+
+    .icons {
+        font-size: 15px;
+    }
+
+    .text h1 {
+        font-size: 35px;
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .links {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    nav {
+        justify-content: space-evenly;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .header h3 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .text h1 {
+        font-size: 25px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .header h3 {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .header h3 {
+        font-size: 12px;
+    }
+}
+
+/*********************/
+/* Animations        */
+/*********************/
+
+@keyframes point {
+    0% {bottom: 50px;}
+    50% {bottom: 30px;}
+    100% {bottom: 50px;}
+}
+
+@keyframes fadein {
+    0% {position: absolute; top: 60px; opacity: 0;}
+    100% {position: absolute; top: 0px; opacity: 1;}
+}
+
+@keyframes fadein2 {
+    0% {top: 60px; opacity: 0;}
+    100% {top: 0px; opacity: 1;}
+}
+
+@keyframes fadein3 {
+    0% {bottom: 125px; opacity: 0;}
+    100% {bottom: 75px; opacity: 1;}
+}
